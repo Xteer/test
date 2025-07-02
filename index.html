@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WetterApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css " rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <i class="fas fa-cloud-sun"></i> WetterApp <i class="fas fa-mountain-sun"></i>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Ort eingeben...">
+            <button onclick="searchLocation()">
+                <i class="fas fa-search"></i> Suchen
+            </button>
+        </div>
+
+        <div class="weather-container">
+            <div class="card current-weather" id="currentWeather">
+                <h2 id="location">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    <span id="locationName"></span>
+                </h2>
+                <p id="dateTime"></p>
+                <div class="temp" id="temperature">
+                    <span id="tempValue"></span>°C
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <p id="weatherDescription" class="weather-icon"></p>
+                <div class="details">
+                    <p><i class="fas fa-cloud-rain"></i> Niederschlag: <span id="precipitation"></span>%</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-clock"></i> Stündliche Prognose</h3>
+                <div class="forecast" id="hourlyForecast"></div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-calendar-day"></i> Tägliche Prognose</h3>
+                <div class="forecast" id="dailyForecast"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Daten von <a href="https://open-meteo.com " target="_blank">Open-Meteo.com</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
